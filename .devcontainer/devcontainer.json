@@ -1,0 +1,31 @@
+{
+    "name": "ROS2 Development Environment",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "service": "ros2",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-iot.vscode-ros",
+                "ms-python.python",
+                "ms-azuretools.vscode-docker",
+                "eamodio.gitlens",
+                "ms-python.flake8"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "python.defaultInterpreterPath": "/usr/bin/python3",
+                "python.linting.enabled": true,
+                "python.linting.flake8Enabled": true,
+                "python.linting.flake8Args": [
+                    "--max-line-length=88"
+                ],
+                "terminal.integrated.env.linux": {
+                    "PYTHONPATH": "/app:${env:PYTHONPATH}"
+                }
+            }
+        }
+    },
+    "forwardPorts": [10000],
+    "remoteUser": "root"
+}
