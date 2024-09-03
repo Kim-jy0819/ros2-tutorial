@@ -32,6 +32,7 @@ RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUS
     git clone https://github.com/johnhamelink/env-zsh ${ZSH_CUSTOM:-/root/.oh-my-zsh/custom}/plugins/env
 RUN sed -i -e 's/plugins=(git)/plugins=(git env zsh-autosuggestions zsh-syntax-highlighting)/g' /root/.zshrc
 
+RUN echo "source /opt/ros/humble/setup.zsh" >> ~/.zshrc
 # Set Zsh as the default shell
 SHELL ["/bin/zsh", "-c"]
 
