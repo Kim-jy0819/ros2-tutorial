@@ -23,6 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'turtlesim_circle = ros_tutorial.turtlesim_circle:main',
+            'turtlesim_echo = ros_tutorial.turtlesim_echo:main',
         ],
     },
 )
