@@ -27,6 +27,8 @@ setup(
             'turtlesim_echo = ros_tutorial.turtlesim_echo:main',
             'turtlesim_abs_client = ros_tutorial.turtlesim_abs_client:main',
             'turtlesim_abs_server = ros_tutorial.turtlesim_abs_server:main',
+            'turtlesim_rot_client = ros_tutorial.turtlesim_rot_client:main',
+            'turtlesim_rot_server = ros_tutorial.turtlesim_rot_server:main',
         ],
     },
 )
